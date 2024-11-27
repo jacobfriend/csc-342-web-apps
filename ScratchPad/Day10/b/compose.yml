@@ -1,0 +1,12 @@
+name: day10
+
+services:
+  app:
+    build: . # Use the Dockerfile in the backend folder to build the image
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - ./static:/app/static
+      - ./templates:/app/templates
+      - ./app.js:/app/app.js

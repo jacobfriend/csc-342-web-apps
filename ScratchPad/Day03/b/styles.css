@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+  }
+  
+/* Add styles for the customButton class here */
+.customButton {
+    background-color: rgb(239, 239, 239);
+    border: 1px solid rgb(118, 118, 118);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13.333px;
+    border-radius: 2px;
+    margin: 16px;
+    padding: 2px 7.25px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+  
+/* Add styles for when the mouse is over the button here */
+.customButton:hover {
+    background-color: rgb(227, 227, 227);
+    cursor: default;
+}
+/* Add styles for when the button is being pressed here */
+.customButton:active {
+    background-color: rgb(239, 239, 239);
+    border: 1px solid rgb(151, 151, 151);
+    user-select: none;
+}
+
+/* Add styles for when the button is given focus here
+.customButton:focus-visible {
+    
+} */
+
+.customButton[disabled] {
+    background-color: rgb(238, 238, 238);
+    color: rgb(171, 171, 171);
+    border-color: rgb(214, 214, 214);
+}

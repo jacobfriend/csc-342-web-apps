@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fa;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 850px;
+  margin: 20px auto;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "left title right";
+  background-color: #990000;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.header-title {
+  grid-area: title;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/******* PROFILE HEADER *******/
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 20px; /* Gives the profile info a pill shape */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  grid-area: right;
+  margin-left: auto;
+}
+
+
+.profile-header:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* Adds a semi-transparent background on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#logout:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* Adds a semi-transparent background on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#header-username {
+	margin: 0 10px 0 0;
+	font-size: 1rem;
+  cursor: pointer;
+}
+
+#logout {
+	margin: 0 10px 0 0;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+#logout button {
+  color: #fff;
+  font-size: 1.25rem;
+  text-decoration: none;
+  /* Remove default button styling */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.profile-pic {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.small-profile-pic img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+  border: 2px solid #fff !important;
+	object-fit: cover;
+}
+
+/********** INPUT **********/
+
+#howlInput {
+  width: 100%;
+  grid-area: input;
+  display: flex;
+  flex-direction: column;
+}
+
+#howlInput textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+#howlInput button {
+  align-self: flex-end;
+  background-color: #f5f8fa;
+  border: 2px solid #990000;
+  color: #990000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/********** DARK MODE **********/
+
+#darkModeToggle {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: #990000;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/********** PROFILE PAGE **********/
+
+
+/********** PROFILE INFO **********/
+#profileInfo {
+  gap: 20px;
+  color: #990000;
+  padding: 20px;
+}
+
+#profile-username {
+  color: #b06c6c !important;
+}
+
+.big-profile-pic img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+  border: 2px solid #990000;
+	object-fit: cover;
+}
+
+.btn-primary {
+	background-color: #990000 !important;
+	border: none;
+}
+
+.btn-primary:hover {
+	background-color: #c73a3a !important;
+}
+
+/********** FOLLOW LIST **********/
+
+.toggle-icon.collapsed::after {
+  content: "+";
+  font-size: 1.2rem;
+}
+
+/* Expanded state shows a minus (–) */
+.toggle-icon:not(.collapsed)::after {
+  content: "−";
+  font-size: 1.2rem;
+}
+
+.toggle-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+  color: #990000;
+}
+
+.list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.following-header {
+  color: #990000;
+}
+
+#howls-header {
+  color: #990000;
+  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-left: 15px;
+}
+
+/********** HOWLS **********/
+
+#howlList {
+  grid-area: howls;
+  width: 100%;
+}
+
+.howl {
+  margin-bottom: 10px;
+}
+
+.howl:last-child {
+  margin-bottom: 0;
+}
+.howl-content {
+  margin-bottom: 10px;
+}
+
+.howl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.howl-user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.howl-full-name {
+  font-weight: bold;
+  color: #000; /* Ensure it is a visible color */
+  font-size: 1rem; 
+}
+
+.howl-username {
+  color: #555; /* Dark gray for the username */
+  font-size: .75rem; 
+}
+
+.howl-profile-pic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #990000;
+}
+
+.howl-user-details {
+  margin-left: 10px;
+}
+
+.howl-date {
+  font-size: 0.9rem;
+  color: gray;
+  align-self: flex-start;
+}

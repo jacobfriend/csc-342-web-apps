@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/profile.css">
+  <script src="js/home.js" type="module"> defer</script>
+	<script src="js/auth.js" type="module"> defer</script>
+	<script src="js/profile.js" type="module"> defer</script>
+	<title>Profile</title>
+</head>
+
+<body>
+	<!-- CDN to Bootstrap JS Library -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <button id="darkModeToggle" type="button">Dark Mode</button>
+  <header>
+    <div class="header-title">
+      <a href=".">Howler🐺</a>
+    </div>
+    <div class="auth-container">
+      <div id="logout">
+        <button id="logout-btn">Log Out</button>
+      </div>
+      <a class="profile-header" href="profile">
+        <label id="header-username">@username</label>
+        <div class="small-profile-pic">
+          <img src="img/profile-pic.jpg" alt="Profile Picture">
+        </div>
+      </a>
+    </div>
+  </header>
+  <main>
+
+    <!-- PROFILE INFO -->
+		<div class="d-flex align-items-center" id="profileInfo">
+      <div class="big-profile-pic me-3">
+        <img src="img/profile-pic.jpg" alt="Profile Picture">
+      </div>
+			<div class="d-flex flex-column gap-2">
+        <div id="profile-full-name" class="fw-bold fs-3">Stu Dent</div>
+        <div id="profile-username" class="text-muted fs-4">@student</div>
+    	</div>
+			<button id="follow-btn" class="btn btn-primary ms-auto p-3">Follow</button>
+    </div>
+		
+		<!-- FOLLOW LIST -->
+		<div class="container border rounded p-3 mt-2">
+			<div class="d-flex justify-content-between align-items-center">
+				<h5 class="mb-0 following-header">Following</h5>
+				<!-- DROPDOWN -->
+				<span class="toggle-icon collapsed" data-bs-toggle="collapse" data-bs-target="#followerList" aria-expanded="false" aria-controls="followerList" style="cursor: pointer;">
+			</div>
+			<!-- COLLAPSIBLE FOLLOWER LIST -->
+			<div class="collapse" id="followerList">
+				<div id="followingList"></div>	
+			</div>
+		</div>
+		
+		<div id="howls-header">
+			Howls
+    </div>
+
+		<div id="userHowlList"></div>
+
+  </main>
+
+	<!-- HOWL TEMPLATE -->
+  <template id="howlTemplate">
+    <div class="howl container">
+      <!-- Howler User Info Section -->
+      <div class="howl-header">
+          <a class="howl-user-info profile-link" href="#">
+            <div class="howl-profile-pic">
+              <img src="img/profile-pic.jpg" alt="Profile Picture">
+            </div>
+            <div class="howl-user-details">
+              <div class="howl-full-name">Full Name</div>
+              <div class="howl-username">@username</div>
+            </div>
+          </a>
+          <div class="howl-date">Date</div>
+        </div>
+        
+        <!-- Howler Message Section -->
+        <div class="howl-content">
+          Content goes here...
+        </div>
+    </div>
+  </template>
+	<!-- PROFILE TEMPLATE -->
+	<template id="profileTemplate">
+		<div class="following-list-group-item d-flex align-items-center">
+			<a class="howl-user-info profile-link" href="#">
+				<div class="following-small-profile-pic">
+					<img src="img/profile-pic.jpg" alt="Profile Picture" class="following-profile-img rounded-circle">
+				</div>
+				<div class="following-details d-flex align-items-center">
+					<strong class="following-full-name">Full Name</strong>
+					<span class="following-username">@username</span>
+				</div>
+			</a>
+		</div>
+	</template>	
+</body>
+
+</html>

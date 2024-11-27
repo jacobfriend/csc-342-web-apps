@@ -1,0 +1,220 @@
+/* Color Codes:
+Header Background Color: #1F2937 (Dark Slate Gray)
+Main Background Color: #F3F4F6 (Light Gray)
+Footer Background Color: #3B82F6 (Bright Blue)
+Font Color of Normal Text: #111827 (Almost Black)
+Font Color of Header Text: #F9FAFB (Off-White)
+Border Colors: #D1D5DB (Light Gray)
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/********** PAGE CONTAINER **********/
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/********** HEADER **********/
+header {
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 2.5rem;
+    position: fixed;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+    background-color: #1F2937;
+    color: #F9FAFB; 
+    flex-shrink: 0;
+}
+
+/********** FOOTER **********/
+footer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    column-gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: 10vh;
+    background-color: #3B82F6;
+    flex-shrink: 0;
+}
+
+/********** MAIN **********/
+main {
+    flex-grow: 1; /* Main content will expand to fill available space */
+    padding: 9rem 1rem;
+    width: 100%;
+    background-color: #F3F4F6;
+    /* Three Article Categories */
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 1rem;
+}
+
+.category-header {
+    display: flex;
+    justify-content: center;
+    font-family: "New Amsterdam", sans-serif;
+    color: #111827;
+    font-size: 1.8rem;
+}
+
+
+/********** TOP 25 **********/
+#top-25-container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-rows: 1fr 12fr 6fr 6fr; 
+    gap: 1rem;
+}
+
+.top-25-1 {
+    display: flex;
+    justify-content: center;
+}
+
+/********** TRENDING **********/
+#trending-container {
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr 5fr 5fr 5fr 5fr; 
+    gap: 1rem; 
+    grid-template-areas: 
+        ". ."
+        ". ."
+        ". ."; 
+}
+
+/****** TRENDING COMPONENTS ******/
+.trending-header {
+    display: flex;
+    grid-column: 1 / 3;
+    grid-row: 1;
+    justify-content: center;
+    font-family: "New Amsterdam", sans-serif;
+    color: #111827;
+    font-size: 1.8rem;
+}
+
+.trending-1 {
+    grid-column: 1;
+    grid-row: 2 / 4;
+}
+
+.trending-2 {
+    grid-column: 2;
+    grid-row: 2 / 4;
+}
+
+.trending-3 {
+    grid-column: 1;
+    grid-row: 4 / 6;
+}
+
+.trending-4 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.trending-5 {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+/********** RECRUITING **********/
+#recruiting-container {
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr;
+    grid-template-rows: 1fr 6fr 6fr 12fr; 
+    gap: 1rem;
+}
+
+/********** STORIES **********/
+.story {
+    border: 2px solid #D1D5DB;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.story a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/******* COVER PHOTOS *******/
+.cover-photo {
+    width:100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 1rem;
+}
+
+/****** HEADLINE TEXT ******/
+.headline-text {
+    position: absolute;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.04));
+    color: #F9FAFB;
+    width: 100%;
+    font-family: "New Amsterdam", sans-serif;
+    transition: .5s ease;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.story:hover .headline-text {
+    font-size: 2rem;
+}
+
+/********** FOOTER BUTTONS **********/
+.footer-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #1F2937;
+    color: #F9FAFB;
+    border: 2px solid #D1D5DB;
+    border-radius: 0.5rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.footer-button:hover {
+    background-color: #4B5563;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.footer-button:active {
+    background-color: #374151; /* Even darker green when button is pressed */
+    transform: scale(1); /* Return to normal size on click */
+}

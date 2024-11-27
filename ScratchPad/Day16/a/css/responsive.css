@@ -1,0 +1,50 @@
+nav {
+	position: absolute;
+	height: 100%;
+	transform: translate(-262.836px, 0);
+}
+
+nav.open {
+	transform: translate(0, 0);
+}
+
+@media screen and (min-width: 600px) {
+	nav {
+		position: relative;
+		transform: translate(0, 0);
+	}
+
+	#menuToggle {
+		display: none;
+	}
+
+	main::after {
+		content: 'The drawer stays open (and this is shown) if width > 600px';
+	}
+	
+	main p,
+	nav p {
+		text-decoration: line-through;
+	}
+}
+
+@media print {
+	#menuToggle {
+		display: none;
+	}
+
+	main {
+		background-color: white;
+		color: black;		
+	}
+
+	main p,
+	nav p,
+	h1 {
+    color: black;
+  }
+
+	nav {
+		display: none;			
+	}
+}

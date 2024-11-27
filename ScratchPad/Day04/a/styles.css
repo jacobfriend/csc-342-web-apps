@@ -1,0 +1,153 @@
+/********** GENERAL STYLES **********/
+
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #1f5d81;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/********** HEADER **********/
+header {
+    position: fixed;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    background-color: #990000;
+    color: #fff;
+}
+
+/********** MAIN **********/
+main {
+    padding: 30px;
+    display: grid;
+    grid-template-areas: 
+        "nav input"
+        "nav howls"; 
+    justify-content: center;
+    margin: 0 auto;
+    grid-template-columns: auto 1fr;
+    max-width: 500px;
+}
+
+/********** NAVIGATION **********/
+nav {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(203, 203, 203);
+    box-shadow: 0 0 6px #a9a9a9;
+    border-radius: 15px;
+    margin: 16px;
+    padding: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+nav ul li:last-of-type {
+    border-bottom: none;
+}
+
+/********** INPUT **********/
+#howl-input {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(203, 203, 203);
+    box-shadow: 0 0 6px #a9a9a9;
+    margin: 16px;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+#howl-input textarea {
+    margin: 10px;
+}
+
+#howl-input button {
+    align-self: flex-end;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #990000;
+    background-color: #f5f8fa;
+    border-radius: 10px;
+    padding: 10px;
+    color: #990000;
+    font-weight: bold;
+    width: 20%;
+    padding: 5px;
+}
+
+/********** HOWLS **********/
+#howl-list {
+    grid-column: 2;
+}
+
+.howl {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(203, 203, 203);
+    box-shadow: 0 0 6px #a9a9a9;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.howl .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.howl .user {
+    font-weight: bold;
+}
+
+/********** FOOTER **********/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+    padding: 5px;
+    background-color: #fff;
+    border-top: 3px solid #990000;
+}
+
+/********** BACK TO TOP **********/
+#top {
+    visibility: hidden;
+    position: absolute;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #990000;
+    border-radius: 15px;
+    padding: 10px;
+    color: #fff;
+}

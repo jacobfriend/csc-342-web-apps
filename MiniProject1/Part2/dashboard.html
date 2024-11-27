@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>CSC 342 Mini Project 1 Dashboard</title>
+</head>
+<body>
+  <!-- Start Sidebar -->
+  <aside>
+    <!-- App Logo -->
+    <div class="sidebar-logo">
+      <a href="#">
+        <img src="./images/logo.svg" alt="logo">
+      </a>
+      <p>NCSU - CSC 342</p>
+    </div>
+    <!-- End App Logo section -->
+
+    <div>
+      <!-- User Account -->
+      <div class="user-account">
+        <img src="./images/face.jpg" alt="logo">
+        <div>
+          <p>Stu Dent</p>
+          <p>stu.dent@ncsu.edu</p>
+        </div>
+      </div>
+      <!-- End User Account -->
+
+      <!-- links -->
+      <nav class="sidebar-nav">
+        <div>
+          <a href="#">
+            Dashboard
+          </a>
+        </div>
+
+        <div>
+          <a href="#">
+            Forms
+          </a>
+        </div>
+
+        <div>
+          <a href="#">
+            UI Features
+          </a>
+          <!-- Sublinks under dashboard -->
+          <div>
+            <nav>
+              <div>
+                <a href="#">
+                  Buttons
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  Typography
+                </a>
+              </div>
+            </nav>
+          </div>
+          <!-- end sublinks under dashboard -->
+        </div>
+
+        <div>
+          <a href="#">
+            Tables
+          </a>
+        </div>
+
+        <div>
+          <a href="#">
+            Charts
+          </a>
+        </div>
+      </nav>
+      <!-- end links -->
+
+      <!-- aside footer -->
+      <div class="sidebar-footer">
+        <a class="footer-button settings" href="#">Settings</a>
+        <a class="footer-button logout" href="#">Logout</a>
+      </div>
+      <!-- end aside footer -->
+    </div>
+  </aside>
+  <!-- End Sidebar -->
+
+  <!-- Start Content -->
+  <section>
+    <!-- Start header -->
+    <header class="dashboard-header">
+      <!-- left section -->
+      <div class="header-left">
+        <span class="greeting">Greetings Stu Dent!</span>
+
+        <!-- Search form -->
+        <form class="search-form">
+          <input id="text-field-hero-input">
+          <label for="text-field-hero-input">Search..</label>
+        </form>
+        <!-- end search form -->
+      </div>
+      <!-- end left section -->
+
+      <!-- Right section -->
+      <div class="header-right">
+        <!-- Account dropdown -->
+        <div class="dropdown account-dropdown">
+          <button type="button">
+            <img src="./images/face.jpg" alt="user">
+            <span>Stu Dent</span>
+          </button>
+
+          <div tabindex="-1">
+            <ul role="menu" aria-hidden="true" aria-orientation="vertical">
+              <li role="menuitem">
+                <a href="#">Edit profile</a>
+              </li>
+              <li role="menuitem">
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- end account dropdown -->
+
+        <!-- Settings Dropdown -->
+        <div class="dropdown settings-dropdown">
+          <button>&#9881;</button>
+          <div tabindex="-1">
+            <ul role="menu" aria-hidden="true" aria-orientation="vertical">
+              <li role="menuitem">
+                <a href="#">Settings</a>
+              </li>
+              <li role="menuitem">
+                <a href="#">Update</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End settings dropdown -->
+
+        <!-- Notifications dropdown -->
+        <div class="dropdown notifications-dropdown">
+          <button>
+            &#9888;
+          </button>
+          <div tabindex="-1">
+            <h6> Notifications</h6>
+            <ul role="menu" aria-hidden="true" aria-orientation="vertical">
+              <li role="menuitem">
+                <a href="">
+                  <h6>Your account has been verified</h6>
+                  <small> 6 min ago </small>
+                </a>
+              </li>
+              <li role="menuitem">
+                <a href="#">
+                  <h6>You received a new message</h6>
+                  <small> 8 min ago </small>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Notifications dropdown -->
+
+        <!-- Messages dropdown -->
+        <div class="dropdown messages-dropdown">
+          <button>&#9993;
+            <!-- Count Badge -->
+            <span>3</span>
+          </button>
+          <div tabindex="-1">
+            <h6>Messages</h6>
+            <ul role="menu" aria-hidden="true" aria-orientation="vertical">
+              <li role="menuitem">
+                <a href="#">
+                  <div>
+                    <img src="./images/face2.jpg" alt="user">
+                  </div>
+                  <div>
+                    <h6>Mark sent you a message</h6>
+                    <small> 1 Minutes ago </small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Messages dropdown -->
+      </div>
+      <!-- end Right section -->
+    </header>
+    <!-- End Header -->
+
+    <!-- partial -->
+    <main>
+      <!-- Dashboard info boxes -->
+      <div class="info-boxes">
+        <div class="info-box">
+          <h5>Borrowed</h5>
+          <h5>$62,0076.00</h5>
+          <p>48% target reached</p>
+        </div>
+
+        <div class="info-box">
+          <h5>Annual Profit</h5>
+          <h5>$1,958,104.00</h5>
+          <p>55% target reached</p>
+        </div>
+
+        <div class="info-box">
+          <h5>Lead Conversion</h5>
+          <h5>$234,769.00</h5>
+          <p>87% target reached</p>
+        </div>
+
+        <div class="info-box">
+          <h5>Average Income</h5>
+          <h5>$1,200.00</h5>
+          <p>87% target reached</p>
+        </div>
+      </div>
+
+
+      <!-- CARD => Revenue by location  (Map)-->
+      <div class="card revenue-location">
+        <h4>Revenue by location</h4>
+
+        <!-- Subtitle info -->
+        <div class="card-subtitle">
+            <h5>Sales performance revenue based by country</h5>
+            <div>
+              <button>
+                  Last 7 days
+              </button>
+            </div>
+        </div>
+        <!-- End subtitle info -->
+
+        <!-- Data and map -->
+        <div class="card-content">
+          <div>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>United States</td>
+                      <td>$1,671.10</td>
+                      <td> 39% </td>
+                    </tr>
+                    <tr>
+                      <td>Philippines</td>
+                      <td>$1,064.75</td>
+                      <td> 30% </td>
+                    </tr>
+                    <tr>
+                      <td>United Kingdom</td>
+                      <td>$1,055.98</td>
+                      <td> 45% </td>
+                    </tr>
+                    <tr>
+                      <td>Canada</td>
+                      <td>$1,045.49</td>
+                      <td> 80% </td>
+                    </tr>
+                    <tr>
+                      <td>France</td>
+                      <td>$2,050.93</td>
+                      <td> 10% </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+
+          <div>
+            <div class="map">
+              <img src="./images/map.png"/>
+            </div>
+          </div>
+        </div>
+        <!-- end Data and map -->
+      </div>
+      <!-- End of Revenue by location -->
+
+      <!-- Grid -->
+      <div class="grid-layout">
+        <!-- Card => Impressions chart -->
+        <div class="card impressions">
+          <h3>Impressions</h3>
+          <div>
+            <div>
+              <div>
+                <h5>Customers 58.39k</h5>
+                <h2>636,757K</h2>
+              </div>
+            </div>
+            <div>
+              <img src="./images/impressions.png"/>
+            </div>
+          </div>
+        </div>
+        <!-- End of Impressions chart -->
+
+
+        <!-- Card => Traffic chart -->
+        <div class="card traffic">
+          <h3>Traffic</h3>
+          <div>
+            <div>
+              <div>
+                <h5>Customers 58.39k</h5>
+                <h2>636,757K</h2>
+              </div>
+            </div>
+            <div>
+              <img src="./images/traffic.png"/>
+            </div>
+          </div>
+        </div>
+        <!-- End of Traffic chart -->
+      </div>
+
+      <!-- Grid 2/3 and 1/3 -->
+      <div>
+        <!-- Card => Revenue by location 2 -->
+        <div class="card revenue-location-2">
+          <h4>Revenue by location</h4>
+          <div>
+            <h6>Sales performance revenue based by country</h6>
+            <div>
+              <div role="tablist">
+                <div>
+                  <div>
+                    <div>
+                      <button role="tab" aria-selected="true" tabindex="0">
+                        <span>1W</span>
+                      </button>
+                      <button role="tab" aria-selected="true" tabindex="0">
+                        <span>3M</span>
+                      </button>
+                      <button role="tab" aria-selected="true" tabindex="0">
+                        <span>1Y</span>
+                      </button>
+                      <button role="tab" aria-selected="true" tabindex="0">
+                        <span>ALL</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="./images/bar-chart.png"/>
+          </div>
+        </div>
+        <!-- End of Revenue by location 2 -->
+
+        <!-- Card => Order Statistics -->
+        <div class="card order-stats">
+          <div>
+            <div>
+              <h4>Order Statistics</h4>
+              <h6>Customers 58.39k</h6>
+            </div>
+            <div id="sales-legend"></div>
+          </div>
+          <div>
+            <img src="./images/order-stats.png"/>
+          </div>
+        </div>
+        <!-- End of Order Statistics -->
+      </div>
+    </main>
+  </section>
+</body>
+</html>

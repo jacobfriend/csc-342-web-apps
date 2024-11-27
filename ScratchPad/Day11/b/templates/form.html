@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Forms Activity</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/forms.css">
+</head>
+
+<body>
+  <h1>Welcome to your server</h1>
+  <div class="container">
+    <form method="get" action="/submit/get">
+      <h2>GET</h2>
+      <label for="mytext">Text Input:</label>
+      <input type="text" id="mytext" name="mytext">
+      <input type="password" id="password" name="password">
+      <input type="email" id="myemail" name="myemail">
+      <input type="number" id="mynumber" name="mynumber">
+      <input type="date" id="mydate" name="mydate">
+      <textarea id="mytextarea" name="mytextarea"></textarea>
+      <div>
+        <input type="radio" id="myradio1" name="myradio" value="radio1value">
+        <label for="myradio1">Radio Option 1</label>
+        <input type="radio" id="myradio2" name="myradio" value="radio2value">
+        <label for="myradio2">Radio Option 2</label>
+        <input type="radio" id="myradio3" name="myradio" value="radio3value">
+        <label for="myradio3">Radio Option 3</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mycheckbox" name="mycheckbox">
+        <label for="mycheckbox">Checkbox:</label>
+      </div>
+      <div>
+        <select name="myselect" id="myselect">
+            <option value="option1value">Option 1</option>
+            <option value="option2value">Option 2</option>
+            <option value="option3value">Option 3</option>
+        </select>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+
+    <form method="post" action="/submit/post/url"
+    enctype="application/x-www-form-urlencoded">
+      <h2>POST URL-encoded</h2>
+      <label for="mytext">Text Input:</label>
+      <input type="text" id="mytext2" name="mytext">
+      <input type="password" id="password2" name="password">
+      <input type="email" id="myemail2" name="myemail">
+      <input type="number" id="mynumber2" name="mynumber">
+      <input type="date" id="mydate2" name="mydate">
+      <textarea id="mytextarea2" name="mytextarea"></textarea>
+      <div>
+        <input type="radio" id="myradio1_2" name="myradio" value="radio1value">
+        <label for="myradio1">Radio Option 1</label>
+        <input type="radio" id="myradio2_2" name="myradio" value="radio2value">
+        <label for="myradio2">Radio Option 2</label>
+        <input type="radio" id="myradio3_2" name="myradio" value="radio3value">
+        <label for="myradio3">Radio Option 3</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mycheckbox2" name="mycheckbox">
+        <label for="mycheckbox">Checkbox:</label>
+      </div>
+      <div>
+        <select name="myselect" id="myselect2">
+            <option value="option1value">Option 1</option>
+            <option value="option2value">Option 2</option>
+            <option value="option3value">Option 3</option>
+        </select>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+
+    <form method="post" action="/submit/post/multipart" enctype="multipart/form-data">
+      <h2>POST Multipart</h2>
+      <label for="mytext">Text Input:</label>
+      <input type="text" id="mytext3" name="mytext">
+      <input type="password" id="password3" name="password">
+      <input type="email" id="myemail3" name="myemail">
+      <input type="number" id="mynumber3" name="mynumber">
+      <input type="date" id="mydate3" name="mydate">
+      <textarea id="mytextarea3" name="mytextarea"></textarea>
+      <div>
+        <input type="radio" id="myradio1_3" name="myradio" value="radio1value">
+        <label for="myradio1">Radio Option 1</label>
+        <input type="radio" id="myradio2_3" name="myradio" value="radio2value">
+        <label for="myradio2">Radio Option 2</label>
+        <input type="radio" id="myradio3_3" name="myradio" value="radio3value">
+        <label for="myradio3">Radio Option 3</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mycheckbox3" name="mycheckbox">
+        <label for="mycheckbox">Checkbox:</label>
+      </div>
+      <div>
+        <select name="myselect" id="myselect3">
+            <option value="option1value">Option 1</option>
+            <option value="option2value">Option 2</option>
+            <option value="option3value">Option 3</option>
+        </select>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+
+  </div>
+  <div class="container">
+    <form method="post" action="/submit/post/file" enctype="multipart/form-data">
+      <h2>POST Single File</h2>
+      <label for="mytext">Text Input:</label>
+      <input type="text" id="mytext4" name="mytext">
+      <textarea id="mytextarea4" name="mytextarea"></textarea>
+      <div>
+        <input type="radio" id="myradio1_4" name="myradio" value="radio1value">
+        <label for="myradio1">Radio Option 1</label>
+        <input type="radio" id="myradio2_4" name="myradio" value="radio2value">
+        <label for="myradio2">Radio Option 2</label>
+        <input type="radio" id="myradio3_4" name="myradio" value="radio3value">
+        <label for="myradio4">Radio Option 3</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mycheckbox4" name="mycheckbox">
+        <label for="mycheckbox">Checkbox:</label>
+      </div>
+      <div>
+        <select name="myselect" id="myselect4">
+            <option value="option1value">Option 1</option>
+            <option value="option2value">Option 2</option>
+            <option value="option3value">Option 3</option>
+        </select>
+      </div>
+      <input type="file" id="myfile" name="myfile">
+      <input type="submit" value="Submit">
+    </form>
+   
+    <form method="post" action="/submit/post/files" enctype="multipart/form-data">
+      <h2>POST Multiple Files</h2>
+      <label for="mytext">Text Input:</label>
+      <input type="text" id="mytext5" name="mytext">
+      <textarea id="mytextarea5" name="mytextarea"></textarea>
+      <div>
+        <input type="radio" id="myradio1_5" name="myradio" value="radio1value">
+        <label for="myradio1">Radio Option 1</label>
+        <input type="radio" id="myradio2_5" name="myradio" value="radio2value">
+        <label for="myradio2">Radio Option 2</label>
+        <input type="radio" id="myradio3_5" name="myradio" value="radio3value">
+        <label for="myradio4">Radio Option 3</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mycheckbox5" name="mycheckbox">
+        <label for="mycheckbox">Checkbox:</label>
+      </div>
+      <div>
+        <select name="myselect" id="myselect5">
+            <option value="option1value">Option 1</option>
+            <option value="option2value">Option 2</option>
+            <option value="option3value">Option 3</option>
+        </select>
+      </div>
+      <input type="file" id="myfile1" name="myfile1" multiple>
+      <input type="file" id="myfile2" name="myfile2" multiple>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>

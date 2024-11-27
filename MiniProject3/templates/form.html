@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Your Friends</title>
+	<link rel="icon" href="images/icon.svg" type="image/svg+xml">	
+  <link rel="icon" href="images/icon.png" type="image/png"> <!-- PNG fallback -->
+  <link rel="stylesheet" href="css/form.css">
+  <script src="js/script.js" type="module"></script>
+</head>
+<body>
+
+  <div class="container">
+		<form action="send" method="POST" enctype="multipart/form-data" class="payment-form">
+				<!-- SENDER DETAILS -->
+				<div class="section sender-details">
+						<h2>Sender Details 📨</h2>
+						<div class="image-upload">
+								<img src="images/placeholder.png" alt="Preview" class="image-preview">
+								<input type="file" id="file-upload" name="file-upload" required>
+						</div>
+						<div class="input-group">
+								<label for="sender-first-name">First Name:</label>
+								<input type="text" id="sender-first-name" name="sender-first-name" required>
+						</div>
+						<div class="input-group">
+								<label for="sender-last-name">Last Name:</label>
+								<input type="text" id="sender-last-name" name="sender-last-name" required>
+						</div>
+				</div>
+
+				<!-- RECIPIENT DETAILS -->
+				<div class="section recipient-details">
+						<h2>Recipient Details 📩</h2>
+						<div class="input-group">
+								<label for="recipient-first-name">First Name:</label>
+								<input type="text" id="recipient-first-name" name="recipient-first-name" required>
+						</div>
+						<div class="input-group">
+								<label for="recipient-last-name">Last Name:</label>
+								<input type="text" id="recipient-last-name" name="recipient-last-name" required>
+						</div>
+						<div class="input-group">
+								<label for="message">Message:</label>
+								<textarea id="message" name="message" rows="4" cols="25" required></textarea>
+						</div>
+						<div class="input-group">
+								<label>Notify Recipient:</label>
+								<div class="radio-group">
+										<input type="radio" id="notify-email" name="notify" value="email">
+										<label for="notify-email">Email</label>
+										<input type="radio" id="notify-sms" name="notify" value="sms">
+										<label for="notify-sms">SMS</label>
+										<input type="radio" id="notify-none" name="notify" value="none" checked>
+										<label for="notify-none">Do not notify</label>
+								</div>
+						</div>
+						<div class="input-group">
+								<label for="recipient-email">Email:</label>
+								<input type="email" id="recipient-email" name="recipient-email">
+						</div>
+						<div class="input-group">
+								<label for="recipient-phone">Phone Number:</label>
+								<input type="tel" id="recipient-phone" name="recipient-phone">
+						</div>
+				</div>
+
+				<!-- PAYMENT DETAILS -->
+				<div class="section payment-details">
+						<h2>Payment Details 💳</h2>
+						<div class="input-group">
+								<label for="card-type">Card Type:</label>
+								<select id="card-type" name="card-type" required>
+										<option value="visa">Visa</option>
+										<option value="mastercard">MasterCard</option>
+										<option value="amex">American Express</option>
+								</select>
+						</div>
+						<div class="input-group">
+								<label for="card-number">Card Number:</label>
+								<input type="text" id="card-number" name="card-number" required>
+						</div>
+						<div class="input-group-row">
+							<div class="input-group">
+									<label for="expiration">Expiration:</label>
+									<input id="expiration" name="expiration" placeholder="MM/YY" type="month" required>
+							</div>
+							<div class="input-group">
+									<label for="cvv">CVV:</label>
+									<input type="number" id="cvv" name="cvv" placeholder="***" required>
+							</div>
+							<div class="input-group">
+									<label for="amount">Amount ($):</label>
+									<input type="text" id="amount" name="amount" required>
+							</div>
+					</div>					
+						<div class="input-group terms-conditions">
+								<input type="checkbox" id="agree-terms" name="agree-terms" required>
+								<label for="agree-terms">I agree to the Terms and Conditions</label>
+						</div>
+						<button type="submit" class="submit-btn">Send</button>
+				</div>
+		</form>
+	</div>
+  
+</body>
+</html>
